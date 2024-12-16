@@ -11,7 +11,7 @@
 				height: 640px;
 				margin: 100px 30%;
 			}
-			
+			/* 登录标题样式 */
 			.title {
 				width: 100%;
 				height: 50px;
@@ -21,7 +21,7 @@
 				font-weight: bold;
 				border-bottom: 2px solid lightgray;
 			}
-			
+				/* 输入框样式 */
 			.logins2 input {
 				width: 100%;
 				height: 60px;
@@ -33,27 +33,33 @@
 			outline: none;
 				line-height: 60px;
 			}
-			
+			/* 忘记密码区域样式 */
 			.no_password {
 				width: 100%;
 				height: 40px;
 				line-height: 40px;
 				text-align: right;
 			}
-			
+			/* 登录按钮样式 */
 			.logins2 button {
-				width: 50%;
-				margin: 0px 25%;
-				height: 55px;
-				font-size:30px;
-				color: white;
-				line-height: 55px;
-				background-color: #811f3e;
-				border: transparent;
-				border-radius: 33px;
-				margin-top: 40px;
-			}
-			
+			width: 50%;
+			margin: 0px 25%;
+			height: 55px;
+			font-size: 30px;
+			color: #7a4a2a;
+			line-height: 55px;
+			background-color: #ffffff;
+			border: transparent;
+			border-radius: 33px;
+			margin-top: 40px;
+			transition: background-color 0.3s; /* 添加过渡效果 */
+		}
+
+		/* 定义鼠标悬停时的样式 */
+		.logins2 button:hover {
+			background-color: rgb(255, 215, 153); /* 鼠标悬停时的背景颜色 */
+		}
+			/* 登录按钮中的图片样式 */
 			.logins2 button img {
 				width: 45px;
 				vertical-align: middle;
@@ -70,10 +76,45 @@
 				display: flex;
 				justify-content: space-between
 			}
+			/* 左侧横幅图片样式 */
+			.leftbanner {
+				position: absolute; 
+				left: 10%; 
+				top: 50%;
+				transform: translateY(130%); 
+				width: 200px; 
+				height: auto; 
+				}
+			.rightbanner {
+				position: absolute; 
+				left: 80%; 
+				top: 50%;
+				transform: translateY(130%); /* 使图片垂直居中 */
+				width: 200px; 
+				height: auto; 
+				}
+				/* 登录成功的弹窗样式 */
+			#success-popup {
+				display: none; /* 默认隐藏弹窗 */
+				position: fixed;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 500px;
+				padding: 20px;
+				background-color: #f0f0f0;
+				border: 1px solid #ddd;
+				box-shadow: 0 0 10px rgba(0,0,0,0.5);
+				text-align: center;
+				z-index: 1000; /* 确保弹窗在最上层 */
+			}
+
+
+
+		</style>
 		</style>
 	</head>
 	<body>
-		<!-- 导航栏： -->
 		<div class="navs">
 			<img src="img/logo.png" alt="" class="logo">
 			<div class="menus">
@@ -90,24 +131,44 @@
 			</div>
 		</div>
 		
-		<img src="img/banner (5).jpg" alt="" class="banner">
+		<img src="img/banner10086.gif" alt="" class="banner">
 		
 		
-		<!-- 网站主体： -->
+
 		<div class="mains">
 			<div class="logins2">
+				<img src="img/left.gif" alt="图片描述"  class="leftbanner"/>
+				<img src="img/left.gif" alt="图片描述"  class="rightbanner"/>
 				<div class="title">原神·登录</div>
 				<input type="text" placeholder="请输入用户名" />
-				<input type="text" placeholder="请输入登陆密码" />
-				<div class="no_password">什么，忘记密码了？</div>
-				<button> <img src="img/yuansu (2).png" alt="">原神启动<img src="img/yuansu (2).png" alt=""></button>
+				<input type="password" id="password" name="password" class="password-input" placeholder="请输入密码">
+				<div class="no_password">忘记密码</div>
+				<button onclick="showPopup()">原神启动</button>
+
 				<div class="duan">
 					<span>手机号快捷登录</span><span>立即注册</span>
 				</div>
 			</div>
 		</div>
 		
-		<!-- 底部版权： -->
+			<!-- 登录成功的弹窗 -->
+<div id="success-popup">
+	<h2>登录成功！</h2>
+	<p><img src="img/奶龙dance.gif"/></p>
+	<button onclick="closePopup()">关闭</button>
+  </div>
+  
+  <script>
+	// 显示弹窗的函数
+	function showPopup() {
+	  document.getElementById('success-popup').style.display = 'block';
+	}
+  
+	// 关闭弹窗的函数
+	function closePopup() {
+	  document.getElementById('success-popup').style.display = 'none';
+	}
+  </script>
 		<div class="footer">
 			© 米哈游版权所有 | 2024.11.26 
 		</div>
