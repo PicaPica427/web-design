@@ -32,6 +32,7 @@ html {
 
 .showcase {
     height: 100vh;
+    /* vh是一个视口高度单位（Viewport Height），用于基于浏览器视口的高度来设置尺寸。1vh等于视口总高度的1%。 */
     position: relative;
     display: flex;
     align-items: center;
