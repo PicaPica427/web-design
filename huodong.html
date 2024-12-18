@@ -39,7 +39,7 @@
 		
 		
 		<!-- 网站主体： -->
-		<div class="mains">
+		<div class="mains block_suo">
 			<div class="news">
 				 <!-- <img src="img/huodong1.jpg" alt="" /> -->
 
@@ -92,32 +92,36 @@
 			<div class="juese">
 				<div class="juese2">
 					<li>
-						<img src="img/huodong (1).jpg" alt="">
+						<img class="block_yi" src="img/huodong (1).jpg" alt="">
 						<div class="mask">最新的5个原神活动,千万别错过。</div>
 					</li>
 					<li>
-						<img src="img/huodong (2).jpg" alt="">
-						<div class="mask blinking">原神新活动攻逐飨会第一天攻略,游戏,游戏资讯,</div>
+						<img class="block_yi" src="img/huodong (2).jpg" alt="">
+						<div class="mask">原神新活动攻逐飨会第一天攻略,游戏,游戏资讯,</div>
 					</li>
 					<li>
-						<img src="img/huodong (3).jpg" alt="">
+						<img class="block_yi" src="img/huodong (3).jpg" alt="">
 						<div class="mask">原神伴爪同行活动玩法介绍-原神伴爪同行活动怎么玩</div>
 					</li>
 					<li>
-						<img src="img/huodong (4).jpg" alt="">
+						<img class="block_yi" src="img/huodong (4).jpg" alt="">
 						<div class="mask">【原神】5.2版本活动【伴爪同行-第四天】</div>
 					</li>
 					<li>
-						<img src="img/huodong (5).jpg" alt="">
+						<img class="block_yi" src="img/huodong (5).jpg" alt="">
 						<div class="mask">原神四周年庆典福利及奖励介绍 原神四周年庆典活动介绍</div>
 					</li>
 					<li>
-						<img src="img/huodong (6).jpg" alt="">
+						<img  class="block_yi" src="img/huodong (6).jpg" alt="">
 						<div class="mask">原神5.2新版本活动什么时候开 原神活动时间安排</div>
 					</li>
 				</div>
 			</div>
-			
+		</div>
+		
+		<div 	width=80%; height=100vh>
+			<!-- <img src="img/huodongend.gif" width="100%"> -->
+			<img id="guli_gif" src="img/huodongend.jpg" width="100%" alt="guli_body" class="guli_body" onclick="fly_to_top()" position=absolute>
 		</div>
 		
 		<!-- 底部版权： -->
@@ -128,5 +132,18 @@
 	<script type="text/javascript" src="js/huodong_lunbo.js"></script>
 	<script type="text/javascript" src="js/huodong_xiayuanshi.js"></script>
 	
-	
+	<script type="text/javascript">
+	        window.onload = function() {
+	             var gulitop=document.getElementById('guli_gif');
+				 // gulitop.src = ''
+	            gulitop.onmousedown=function(){
+	              document.getElementById('guli_gif').src = "img/huodongend.gif"
+				  // document.getElementById('guli_gif').src = document.getElementById('guli_gif').src
+	            }
+	        }
+	 </script>
 </html>
+
+
+
+
