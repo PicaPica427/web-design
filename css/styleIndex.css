@@ -192,16 +192,6 @@ body {
 }
 
 
-/* 假设我们要将图片设置为整个页面的背景 */
-#bgVideo {
-    position: fixed; /* 固定位置 */
-    top: 0;
-    left: 0;
-    width: 100%; /* 宽度100% */
-    height: 100%; /* 高度100% */
-    object-fit: cover; /* 视频填充整个容器，可能会裁剪 */
-    z-index: -1; /* 确保视频在内容下方 */
-}
 
 .navs,.footer {
 	width: 100%;
