@@ -17,8 +17,10 @@
 }
 
 .zixun {
-	width: 49%;
+	width: 50%;
 	height: 100%;
+	margin-left: 0;
+	/* flex-grow: 1; */
 }
 
 .zixun .title {
@@ -29,7 +31,7 @@
 }
 
 .neirong {
-	width: 100%;
+	width: 70%;
 	height: 88%;
 }
 
@@ -129,7 +131,6 @@ a:hover {
 	-webkit-background-clip: text;
 	-webkit-background-size: 200% 100%;
 	-webkit-animation: maskedAnimation 2s infinite linear;
-	/* font-size: 18px; */
 }
 
 @keyframes maskedAnimation {
@@ -140,47 +141,29 @@ a:hover {
 	100% {
 		background-position: -100% 0;
 	}
-
-
-
-	// 文字闪烁
-	@keyframes blink {
-		0% {
-			opacity: 1;
-		}
-
-		50% {
-			opacity: 0;
-		}
-
-		100% {
-			opacity: 1;
-		}
-	}
-
-	.blinking:hover {
-		animation: blink 1s linear infinite;
-	}
 }
 
 
-@keyframes appear1{
+
+@keyframes appear1 {
 	from {
 		opacity: 0;
-		scale:0.5;
+		scale: 0.5;
 	}
-	to{
+
+	to {
 		opacity: 1;
-		scale:1;
+		scale: 1;
 	}
 }
 
-@keyframes appear2{
+@keyframes appear2 {
 	from {
 		opacity: 0;
 		transform: translateX(-100px);
 	}
-	to{
+
+	to {
 		opacity: 1;
 		transform: translate(0px);
 	}
@@ -188,14 +171,22 @@ a:hover {
 
 
 
-.block_suo{
+.block_suo {
 	animation: appear1 5s linear;
 	animation-timeline: view();
 	animation-range: entry 0% cover 20%;
 }
 
-.block_yi{
+.block_yi {
 	animation: appear2 5s linear;
 	animation-timeline: view();
 	animation-range: entry 0% cover 20%;
 }
+
+
+
+
+
+
+
+

@@ -18,3 +18,8 @@
 .slide.active {
     opacity: 1;
 }
+
+
+.slide img{
+	border: 10px solid #000000;
+}

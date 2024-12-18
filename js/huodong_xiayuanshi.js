@@ -13,7 +13,7 @@ function vision() {
 		eval("div" + i).style.visibility = "visible";
 }
 
-function start() {
+function rain_start() {
 	setInterval("move()", 1000);
 	vision();
 }
@@ -23,3 +23,5 @@ for (i = 1; i <= 10; i++) {
 		"%;width:21;height:21;visibility:hidden;\"><dd><img src=\"\./img/1.png\" WIDTH=\"21\" HEIGHT=\"29\"></dd></div>"
 		);
 }
+
+rain_start()
