@@ -1,15 +1,73 @@
+:root {
+	--base-color: white;
+	--base-variant: #e8e9ed;
+	--text-color: #111528;
+	--secondary-text: #232738;
+	--primary-color: #3a435d;
+	--accent-color: #0071ff;
+}
+
+.darkmode {
+	--base-color: #070b1d;
+	--base-variant: #101425;
+	--text-color: #ffffff;
+	--secondary-text: #a4a5b8;
+	--primary-color: #3a435d;
+	--accent-color: #0071ff;
+}
+
 * {
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
-	font-family: 宋体;
 }
 
 body {
-	background-color: whitesmoke;
+	/* background-color: whitesmoke; */
+	min-height: 100vh;
+	background-color: var(--base-color);
+	color: var(--text-color);
 }
 
-.navs,.footer {
+.cta-button {
+	background-color: var(--accent-color);
+}
+
+#theme-switch {
+	height: 50px;
+	width: 50px;
+	padding: 0;
+	border-radius: 50%;
+	background-color: var(--base-variant);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+#theme-switch svg {
+	fill: var(--primary-color);
+}
+
+#theme-switch svg:last-child {
+	display: none;
+}
+
+.darkmode #theme-switch svg:first-child {
+	display: none;
+}
+
+.darkmode #theme-switch svg:last-child {
+	display: block;
+}
+
+
+
+
+.navs,
+.footer {
 	width: 100%;
 	background-color: #811f3e;
 }
@@ -32,7 +90,7 @@ body {
 	margin-left: 40px;
 }
 
-a{
+a {
 	height: 100%;
 	text-align: center;
 	text-decoration: none;
@@ -47,7 +105,9 @@ a{
 	display: inline-block;
 }
 
-.navs .menus,.navs,.logo {
+.navs .menus,
+.navs,
+.logo {
 	float: left;
 }
 
@@ -75,7 +135,7 @@ img {
 .banner {
 	width: 100%;
 	height: 95vh;
-	
+
 }
 
 /* 底部版权: */
