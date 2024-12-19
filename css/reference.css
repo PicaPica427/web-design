@@ -14,7 +14,7 @@
 	inherits: false;
 }
 
-.card::after,
+.card::after,   /*伪类*/
 .card::before {
 	content: '';
 	position: absolute;

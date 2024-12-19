@@ -20,17 +20,7 @@ function nextSlide() {
 }
 
 function startSlideshow() {
-	setInterval(nextSlide, 3000); // 每隔3秒切换一次轮播图
+	setInterval(nextSlide, 3000);
 }
 
 startSlideshow();
-
-
-// window.onload = function() {
-// 	var gulitop = document.getElementById('guli_gif');
-// 	// gulitop.src = ''
-// 	gulitop.onmousedown = function() {
-// 		document.getElementById('guli_gif').src = "img/huodongend.gif"
-// 		// document.getElementById('guli_gif').src = document.getElementById('guli_gif').src
-// 	}
-// }
